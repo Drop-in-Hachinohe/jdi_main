@@ -1,0 +1,840 @@
+// 変数定義
+$mainPurple: rgb(41,57, 128);
+$mainStringRed: #d96666;
+$mainRed: #b9272d;
+$line: #009e5a;
+
+.main_purple_grade {
+  background: rgb(41,57,128);
+  background: linear-gradient(45deg, rgba(41,57,128,1) 0%, rgba(41,57,128,0.8) 100%);
+}
+
+.main_purple_grade-70 {
+  background: rgb(78,103,151);
+  background: linear-gradient(45deg, rgba(78,103,151,1) 0%, rgba(128,130,184,1) 100%);
+}
+
+.main_purple_grade-20 {
+  background: rgb(78,103,151);
+  background: linear-gradient(45deg, rgba(78,103,151,0.2) 0%, rgba(128,130,184,0.2) 100%);
+}
+
+.main_red_grade {
+  background: rgb(174,39,45);
+  background: linear-gradient(45deg, rgba(174,39,45,0.7) 0%, rgba(174,39,45,1) 100%);
+}
+
+.main_red_grade-25 {
+  background: rgb(234,178,132);
+  background: linear-gradient(45deg, rgba(234,178,132,0.25) 0%, rgba(234,147,132,0.25) 100%);
+}
+.bg-line {
+  background-color: $line;
+}
+
+// text color
+.color-main_string_red {
+  color: $mainStringRed;
+}
+.color-main_purple {
+  color: $mainPurple
+}
+.color-main_red {
+  color: $mainRed;
+}
+.color-white {
+  color: white
+}
+.color-string_gray {
+  color: #333333
+}
+
+
+
+// fontSize from tailWind 
+.text-xs {
+  font-size: 0.75rem; /* 12px */
+  @media (min-width: 580px) {
+    font-size: 0.8rem;
+  }
+}
+.text-sm {
+  font-size: 0.875rem; /* 14px */
+  @media (min-width: 580px) {
+    font-size: 0.9rem;
+  }
+}	
+.text-base {
+  font-size: 1rem; /* 16px */
+  @media (min-width: 580px) {
+    font-size: 1.1rem;
+  }
+}
+.text-lg {
+  font-size: 1.125rem; /* 18px */
+  @media (min-width: 580px) {
+    font-size: 1.2rem;
+  }
+}
+.text-xl {
+  font-size: 1.25rem; /* 20px */
+  @media (min-width: 580px) {
+    font-size: 1.35rem;
+  }
+}
+.text-2xl	{
+  font-size: 1.5rem; /* 24px */
+  @media (min-width: 580px) {
+    font-size: 1.7rem;
+  }
+}
+.text-3xl {
+  font-size: 1.875rem; /* 30px */
+  line-height: 2.25rem; /* 36px */
+  @media (min-width: 580px) {
+    font-size: 2rem;
+  }
+}
+.text-4xl	{
+  font-size: 2.25rem; /* 36px */
+  @media (min-width: 580px) {
+    font-size: 2.5rem;
+  }
+}
+.text-5xl {
+  font-size: 3rem; /* 48px */
+  line-height: 1;
+  @media (min-width: 580px) {
+    font-size: 3.5rem;
+  }
+}
+// .text-6xl {
+//   font-size: 3.75rem; /* 60px */
+//   line-height: 1;
+//   @media (min-width: 580px) {
+//     font-size: 4rem;
+//   }
+// }
+// .text-7xl {
+//   font-size: 4.5rem; /* 72px */
+//   line-height: 1;
+//   @media (min-width: 580px) {
+//     font-size: 5rem;
+//   }
+// }
+// .text-8xl	{
+//   font-size: 6rem; /* 96px */
+//   line-height: 1;
+//   @media (min-width: 580px) {
+//     font-size: 7rem;
+//   }
+// }
+// .text-9xl	{
+//   font-size: 8rem; /* 128px */
+//   line-height: 1;
+// }
+
+.font_weight-400 {
+  font-weight: 400;
+}
+.font_weight-500 {
+  font-weight: 500;
+}
+.font_weight-700 {
+  font-weight: 700;
+}
+
+// Util
+@for $i from 0 through 30 {
+  .mt-#{$i * 5} {
+    margin-top:#{$i * 5}px;
+  }
+  .mb-#{$i * 5} {
+    margin-bottom:#{$i * 5}px;
+  }
+  .mr-#{$i * 5} {
+    margin-right:#{$i * 5}px;
+  }
+  .ml-#{$i * 5} {
+    margin-left:#{$i * 5}px;
+  }
+  .m-#{$i * 5} {
+    margin:#{$i * 5}px;
+  }
+  .pt-#{$i * 5} {
+    padding-top:#{$i * 5}px;
+  }
+  .pb-#{$i * 5} {
+    padding-bottom:#{$i * 5}px;
+  }
+  .pr-#{$i * 5} {
+    padding-right:#{$i * 5}px;
+  }
+  .pl-#{$i * 5} {
+    padding-left:#{$i * 5}px;
+  }
+  .p-#{$i * 5} {
+    padding:#{$i * 5}px;
+  }
+  .p-cover-#{$i * 5} {
+    padding:#{$i * 5}px #{$i * 5 * 1.5}px;
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+// Breakpoint prefix	Minimum width	CSS
+// sm	640px	@media (min-width: 640px) { ... }
+// md	768px	@media (min-width: 768px) { ... }
+// lg	1024px	@media (min-width: 1024px) { ... }
+// xl	1236px	@media (min-width: 1236px) { ... }
+// 2xl	1536px
+// min-width が1236までしか効かない
+
+.sm_above_only {
+  @media (max-width: 639px) {
+    display: none !important;
+  }
+}
+.sm_only {
+  @media (min-width: 640px) {
+    display: none;
+  }
+}
+.md_above_only {
+  @media (max-width: 767px) {
+    display: none !important;
+  }
+}
+.md_only {
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+.lg_above_only {
+  @media (max-width: 1023px) {
+    display: none !important;
+  }
+}
+.lg_only {
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+.xl_above_only {
+  @media (max-width: 1235px) {
+    display: none !important;
+  }
+}
+.xl_only {
+  @media (min-width: 1236px) {
+    display: none;
+  }
+}
+
+// mixin
+
+@mixin btn {
+  padding: 5px 20px;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 10px;
+}
+
+@mixin text-xs {
+  font-size: 0.75rem; /* 12px */
+  @media (min-width: 580px) {
+    font-size: 0.8rem;
+  }
+}
+@mixin text-sm {
+  font-size: 0.875rem; /* 14px */
+  @media (min-width: 580px) {
+    font-size: 0.9rem;
+  }
+}	
+@mixin text-base {
+  font-size: 1rem; /* 16px */
+  @media (min-width: 580px) {
+    font-size: 1.1rem;
+  }
+}
+@mixin text-lg {
+  font-size: 1.125rem; /* 18px */
+  @media (min-width: 580px) {
+    font-size: 1.2rem;
+  }
+}
+@mixin text-xl {
+  font-size: 1.25rem; /* 20px */
+  @media (min-width: 580px) {
+    font-size: 1.35rem;
+  }
+}
+@mixin text-2xl	{
+  font-size: 1.5rem; /* 24px */
+  @media (min-width: 580px) {
+    font-size: 1.7rem;
+  }
+}
+@mixin text-3xl {
+  font-size: 1.875rem; /* 30px */
+  line-height: 2.25rem; /* 36px */
+  @media (min-width: 580px) {
+    font-size: 2rem;
+  }
+}
+@mixin text-4xl	{
+  font-size: 2.25rem; /* 36px */
+  @media (min-width: 580px) {
+    font-size: 2.5rem;
+  }
+}
+@mixin text-5xl {
+  font-size: 3rem; /* 48px */
+  line-height: 1;
+  @media (min-width: 580px) {
+    font-size: 3.5rem;
+  }
+}
+@mixin sectionX_padding {
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  @media (min-width: 640px) {
+    padding-left: 7vw;
+    padding-right: 7vw;
+  }
+  @media (min-width: 768px) {
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+  @media (min-width: 1236px) {
+    width: 1236px;
+    margin: 0 auto;
+  }
+}
+
+/* section共通 */
+.section_inner {
+  width: 100%;
+  padding: 50px 20px;
+  @media (min-width: 640px) {
+    padding: 50px 7vw;
+  }
+  @media (min-width: 768px) {
+    padding: 50px 10vw;
+  }
+  @media (min-width: 1024px) {
+    padding: 65px 10vw;
+  }
+  @media (min-width: 1236px) {
+    width: 1236px;
+    margin: 0 auto;
+    padding: 80px 0;
+  }
+}
+
+.section_title {
+  padding: 20px;
+  background-image: url("../images/title_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-clip: border-box;
+  position: relative;
+  min-height: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 10px;
+    background-color: $mainPurple;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &_content {
+    background-color: $mainPurple;
+    width: 90%;
+    border-radius: 5px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    @media (min-width: 640px) {
+      width: 70%;
+    }
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      display: block;
+      background-color: white;
+      border-radius: 5px;
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      z-index: -1;
+    }
+    &_message {
+      display: inline-block;
+      width: fit-content;
+      &.main {
+        border-bottom: solid 1px $mainPurple;
+        outline-offset: 4px;
+      }
+    }
+  }
+  &_deco {
+    position: absolute;
+    width: 50px;
+    &.front {
+      top: 0px;
+      left: 0px;
+    }
+    &.rear {
+      transform: rotate(180deg);
+      bottom: 10px;
+      right: 10px;
+    }
+  }
+}
+
+// タイトルの吹き出しっぽいデコレーション
+.bubble_deco {
+  display: inline-block;
+  position: relative;
+  &_inner {
+    display: inline-block;
+    position: absolute;
+    border-top: solid $mainPurple 1px;
+    height: 15px;
+    bottom: -20px;
+    &.front {
+      border-right: solid $mainPurple 1px;
+      width: 60%;
+      left: 0;
+    }
+    &.rear {
+      border-left: solid $mainPurple 1px;
+      right: 0;
+      width: calc(40% - 15px);
+      transform: skewX(-45deg) translateX(-9px);
+    }
+  }
+}
+
+.belt_message {
+  text-align: center;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include sectionX_padding
+}
+
+// キービジュアル
+.kv {
+  padding-top: 100px;
+  @media (min-width: 800px) {
+    display: flex;
+    min-height: 600px;
+  }
+  &_message {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    @media (min-width: 800px) {
+      padding: 20px 20px 20px 5%;
+    }
+    &_sub {
+    }
+    &_main {
+      display: inline-block;
+      color: white;
+      padding: 5px 10px;
+      font-weight: 700;
+      .name {
+        font-size: 2rem; 
+        // @media (min-width: 580px) {
+        //   font-size: 2.5rem;
+        // }
+        @media (min-width: 768px) {
+          font-size: 2.5rem;
+        }
+      }
+    }
+    @media (min-width: 768px) {
+      width: 65%;
+    }
+  }
+}
+
+// header
+.header {
+  width: 100%;
+  height: 90px;
+  position: fixed;
+  box-shadow: 0px 2px 10px 0 rgba(0,0,0,.2);
+  z-index: 100;
+  @media (min-width: 768px) {
+    height: 150px;
+  }
+  &_main {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    &_logo {
+      width: 90px;
+      padding: 2%;
+    }
+    &_logo_area {
+      display: flex;
+      align-items: center;
+    }
+  }
+  &_offer {
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+    &_dial {
+      display: flex;
+      flex-direction: column;
+      padding-right: 10px;
+      &_number {
+        display: flex;
+        margin-bottom: 5px;
+      }
+      &_icon {
+        width: 50px;
+        padding-right: 5px;
+      }
+      &_caption {
+        border-radius: 10px;
+        text-align: center;
+        padding: 0 10px;
+        color: white;
+      }
+    }
+    &_other {
+      &_item {
+        display: flex;
+        padding: 0 10px;
+        border-radius: 10px;
+        align-items: center;
+        color: white;
+        &.line {
+          margin-bottom: 5px;
+        }
+      }
+      &_icon {
+        width: 30px;
+        padding: 3px;
+      }
+    }
+  }
+}
+
+.global_nav {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  .nav_menu {
+    display: flex;
+    &_item {
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      color: white;
+      &:not(:last-child) {
+        border-right: solid 1px white;
+      }
+    }
+  }
+}
+
+// お悩み事やトラブルに幅広く対応しております。
+.cases {
+  &_title {
+    height: 100px;
+  }
+  &_list {
+    &_item_inner {
+      @include sectionX_padding;
+      padding-top: 50px;
+      padding-bottom: 30px;
+      @media (min-width: 768px) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      @media (min-width: 1236px) {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+    }
+    &_item {
+      &:nth-child(even) {
+        background: rgb(41,57,139);
+        background: linear-gradient(45deg, rgba(41,57,139,0) 40%, rgba(41,57,139,0.2) 100%);
+        .cases_list_item_inner {
+          @media (min-width: 768px) {
+            flex-direction: row-reverse;
+          }
+        }
+      }
+      &_content {
+        width: 100%;
+        @media (min-width: 768px) {
+          width: 55%;
+        }
+      }
+      &_img {
+        width: 100%;
+        @media (min-width: 640px) {
+          padding: 0 5%;
+        }
+        @media (min-width: 768px) {
+          padding: 0;
+          width: 40%;
+        }
+      }
+      &_btn {
+        @include btn;
+        &_arrow {
+          width: 20px;
+        }
+
+      }
+    }
+  }
+}
+
+.first_offer {
+  width: 100%;
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+  }
+  &_message {
+    width: 100%;
+    padding: 20px;
+    @media (min-width: 768px) {
+      width: 70%;
+      padding-bottom: 0;
+      padding-left: 10vw
+    }
+    &_bold {
+      font-size:  1.2rem;
+      @media (min-width: 768px) {
+        font-size:  1.3rem;
+      }
+      @media (min-width: 1024px) {
+        font-size:  1.7rem;
+      }
+    }
+  }
+  &_img {
+    width: 100%;
+    object-fit: cover;
+    @media (min-width: 768px) {
+      width: 30%;
+    }
+  }
+}
+
+// はじめて探偵事務所をご利用になる方へ
+.first_time {
+  @media (min-width: 768px) {
+    display: flex;
+  }
+  &.first {
+    @media (min-width: 768px) {
+      flex-direction: row-reverse;
+    }
+  }
+  &_content {
+    width: 100%;
+    padding: 30px;
+    @media (min-width: 768px) {
+      width: 60%;
+    }
+    @media (min-width: 1236px) {
+      width: 50%;
+    }
+    &.first {
+      @media (min-width: 768px) {
+        padding-left: 10vw;
+      }
+    }
+    &.second {
+      @media (min-width: 768px) {
+        padding-right: 10vw;
+      }
+    }
+  }
+  &_desc {
+    @include text-sm;
+    @media (min-width: 1024px) {
+      @include text-base;
+    }
+  }
+  &_img {
+    background-position: top;
+    background-clip: border-box;
+    background-size: 100%;
+    height: 400px;
+    &.first {
+      background-image: url("../images/first_time_01.jpg");
+      @media (min-width: 768px) and (max-width: 1023px) {
+        background-image: url("../images/first_time_01_large.jpg");
+      }
+    }
+    &.second {
+      background-image: url("../images/first_time_02.jpg");
+    }
+    @media (min-width: 768px) {
+      width: 40%;
+      height: auto;
+    }
+    @media (min-width: 1236px) {
+      width: 50%;
+    }
+  }
+}
+.performance {
+  padding: 20px 30px;
+  border-radius: 10px;
+}
+
+.user_list {
+  padding-top: 100px;
+  padding-bottom: 80px;
+  &_item_inner {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    @media (min-width: 640px) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  &_item {
+    @include sectionX_padding;
+    &:nth-child(odd) {
+      background: linear-gradient(45deg, rgba(234,178,132,0.25) 0%, rgba(234,147,132,0.25) 100%);
+    }
+    &:nth-child(even) {
+      .user_list_item_inner {
+        flex-direction: row-reverse;
+      }
+    }
+    &_content {
+      @media (min-width: 640px) {
+        width: 50%;
+        margin-left: 0;
+      }
+      @media (min-width: 768px) {
+        width: 65%;
+      }
+    }
+    &_img {
+      width: 80%;
+      margin-left: 10%;
+      border-radius: 20px;
+      margin-top: 30px;
+      @media (min-width: 640px) {
+        width: 48%;
+        margin-left: 0;
+      }
+      @media (min-width: 768px) {
+        width: 30%;
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.feature {
+  &_item_inner {
+    @include sectionX_padding;
+    @media (min-width: 768px) {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+    }
+    position: relative;
+  }
+  &_item {
+    background: rgb(41,57,139);
+    background: linear-gradient(175deg, rgba(41,57,139,0) 76%, rgba(41,57,139,0.2) 100%);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    &:last-child {
+      padding-bottom: 50px;
+    }
+    position: relative;
+    &_sign {
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      
+      @media (min-width: 768px) and  (max-width: 1023px){
+        width: 12vw;
+        height: 12vw;
+      }
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      top: -10px;
+      left: 6%;
+      &_number {
+        font-family: 'Times New Roman', Times, serif;
+        transform: skewX(-10deg);
+        font-size: 40px;
+        line-height: 1;
+      }
+    }
+    &_img {
+      width: 100%;
+      @media (min-width: 640px) {
+        width: 50%;
+        margin-left: 50%;
+      }
+      @media (min-width: 768px) {
+        width: 30%;
+        margin-left: 0;
+      }
+    }
+    &_content {
+      @media (min-width: 768px) {
+        width: 67%;
+      }
+      &_header {
+        margin-left: 150px;
+        @media (min-width: 768px) {
+          margin-left: 0;
+        }
+      }
+      &_desc {
+        margin: 80px 0 30px;
+        @media (min-width: 768px) {
+          margin: 0;
+        }
+      }
+    }
+  }
+  
+  
+}
