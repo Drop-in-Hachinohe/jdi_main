@@ -4,6 +4,9 @@ $mainStringRed: #d96666;
 $mainRed: #b9272d;
 $pink: rgba(234, 147, 132, .5);
 $line: #009e5a;
+$border-gray: #d3d4d4;
+$string_gray: #4d4d4d;
+$commonRed: #df3c23;
 
 @font-face {
   font-family: "Avant Garde";
@@ -52,7 +55,7 @@ $line: #009e5a;
   color: white
 }
 .color-string_gray {
-  color: #333333
+  color: $string_gray
 }
 
 // fontSize from tailWind 
@@ -114,6 +117,18 @@ $line: #009e5a;
   font-size: 1.8125rem; /* 29px */
   @media (min-width: 640px) {
     font-size: 1.875rem; /* 30px */
+  }
+}
+.text-7xl	{
+  font-size: 2rem; /* 32px */
+  @media (min-width: 640px) {
+    font-size: 2.125rem; /* 34px */
+  }
+}
+.text-8xl	{
+  font-size: 2.1875rem; /* 35px */
+  @media (min-width: 640px) {
+    font-size: 2.25rem; /* 36px */
   }
 }
 
@@ -467,7 +482,6 @@ $line: #009e5a;
 
 .belt_message {
   text-align: center;
-  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -521,8 +535,12 @@ $line: #009e5a;
   box-shadow: 0px 2px 10px 0 rgba(0,0,0,.2);
   z-index: 100;
   height: 50px;
+
   @media (min-width: 768px) {
     height: 140px;
+    &.hidden {
+      height: 50px;
+    }
   }
   &_main {
     display: flex;
@@ -627,15 +645,13 @@ $line: #009e5a;
 
 @keyframes slide_open {
   0% {
-    top: 0;
+    top: -50px;
     opacity: 0;
   }
   50% {
-    top: 70px;
     opacity: 0;
   }
   100% {
-    top: 140px;
     opacity: 1;
   }
 }
@@ -679,6 +695,7 @@ $line: #009e5a;
           @media (min-width: 768px) {
             animation: slide_open .2s ease;
             opacity: 100%;
+            display: flex;
           }
         }
         &::before {
@@ -723,9 +740,13 @@ $line: #009e5a;
           padding: 10px;
           background: rgb(41,57,128);
           background: linear-gradient(45deg, rgba(41,57,128,1) 0%, rgba(41,57,128,0.8) 100%);
-          display: flex;
           flex-wrap: wrap;
           justify-content: space-between;
+        }
+        &.header_hidden {
+          @media (min-width: 768px) {
+            top: 50px;
+          }
         }
         &_item {
           background-color: white;
@@ -851,7 +872,7 @@ $line: #009e5a;
     position: absolute;
     bottom: 0;
     right: 10px;
-    width: 70vw;
+    width: 60vw;
     @media (min-width: 640px) {
       right: 10px;
       width: 28%;
@@ -880,6 +901,9 @@ $line: #009e5a;
     left: 2%;
     bottom: 0;
     width: 22%;
+    @media (min-width: 768px) and (max-width: 1024px) {
+      width: 19%;
+    }
   }
   &_content {
     padding: 0 20px;
@@ -887,14 +911,16 @@ $line: #009e5a;
       padding: 0 20px 0 15%;
     }
   }
-  &_message_main {
-    text-align: center;
-    font-size: 25px;
-    @media (min-width: 768px) {
-      font-size: 35px;
-    }
-    @media (min-width: 1024px) {
-      text-align: left;
+  &_message {
+    &_main {
+      text-align: center;
+      font-size: 25px;
+      @media (min-width: 768px) {
+        font-size: 35px;
+      }
+      @media (min-width: 1024px) {
+        text-align: left;
+      }
     }
   }
   &_dial {
@@ -1353,5 +1379,89 @@ $line: #009e5a;
     &_img {
       width: 50px;
     }
+  }
+}
+
+.form {
+  * {
+    color: $string_gray;
+  }
+  input[type="text"], input[type="email"], input[type="date"], select, textarea {
+    background-color: white;
+    border: solid $border-gray 1px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    &.w-100 {
+      width: 100%;
+    }
+    &.w-50 {
+      width: 50%;
+    }
+  }
+  select {
+    display: flex;
+  }
+  &_item_inner {
+    @include sectionX_padding;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  &_item {
+    &:nth-child(even) {
+      background-color: rgba(0,0,0,.05);
+    }
+  }
+  &_title {
+    @include text-base;
+    font-weight: 500;
+    display: block;
+    padding-bottom: 10px;
+    &:after {
+      @include text-sm;
+      color: white;
+      border-radius: 2px;
+      padding: 0 10px;
+      margin-left: 10px;
+    }
+    &.required:after {
+      content: "必須";
+      background-color: $commonRed;
+    }
+    &.option:after {
+      content: "任意";
+      background-color: gray;
+    }
+  }
+  &_radio {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    &_item {
+      border: solid $border-gray 1px;
+      border-radius: 5px;
+      padding: 5px 10px;
+    }
+  }
+  &_privacy {
+    @include text-sm;
+    background-color: rgba(0,0,0,.05);
+    height: 300px;
+    overflow: scroll;
+    border: solid $border-gray 1px;
+    padding: 10px;
+    margin-top: 15px;
+    &_item {
+      margin: 10px 0 15px;
+    }
+    &_title {
+      font-weight: 500;
+      @include text-base
+    }
+  }
+  &_submit {
+    color: white;
+    padding: 10px 30px;
+    @include btn;
+    @include text-2xl;
   }
 }

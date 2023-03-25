@@ -12,8 +12,8 @@
   <title>Document</title>
 </head>
 <body>
-  <header class="header">
-    <div class="header_main">
+  <header id="js-header" class="header">
+    <div id="js-header_main" class="header_main">
       <div class="header_main_logo_area">
         <img src="images/JDI_logo.png" alt="JDI_logo" class="header_main_logo"/>
         <div>
@@ -154,11 +154,11 @@
         <div class="cases_list_item_inner">
           <div class="cases_list_item_content">
             <header>
-              <span class="color-main_string_red font_weight-500 text-5xl">「浮気・不倫</span>
-              <span class="text-3xl">でお悩みの方</span>
-              <span class="color-main_string_red font_weight-500 text-5xl">」</span>
+              <span class="color-main_string_red font_weight-500 text-8xl">「浮気・不倫</span>
+              <span class="text-6xl">でお悩みの方</span>
+              <span class="color-main_string_red font_weight-500 text-8xl">」</span>
             </header>
-            <div class="text-sm mt-10">
+            <div class="text-sm mt-20">
               「事実が知りたい」「浮気を認めさせたい」「離婚・裁判・親権に有利な証拠が欲しい」
               「慰謝料を取りたい「浮気を辞めさせて、やり直したい」など、
               みなさま一人一人のお気持ちに寄り添ったをご提案をいたします。
@@ -176,11 +176,11 @@
         <div class="cases_list_item_inner">
           <div class="cases_list_item_content">
             <header>
-              <span class="color-main_purple font_weight-500 text-5xl">「家出・失踪のトラブル</span>
-              <span class="text-3xl">でお悩みの方</span>
-              <span class="color-main_purple font_weight-500 text-5xl">」</span>
+              <span class="color-main_purple font_weight-500 text-8xl">「家出・失踪のトラブル</span>
+              <span class="text-6xl">でお悩みの方</span>
+              <span class="color-main_purple font_weight-500 text-8xl">」</span>
             </header>
-            <div class="text-sm mt-10">
+            <div class="text-sm mt-20">
               夫婦の不仲、進路・進学の悩み、会社での人間関係、恋人やパートナーとの破局、病気や健康不安など、家出や失踪の理由は様々です。
               早期発見・早期解決には迅速な対応が求められます。ご家族や大切な人の家出や失踪でお悩みの方は、できるだけお早めにご相談ください。
             </div>
@@ -197,11 +197,11 @@
         <div class="cases_list_item_inner">
           <div class="cases_list_item_content">
             <header>
-              <span class="color-main_string_red font_weight-500 text-5xl">「信頼できる人物か</span>
-              <span class="text-3xl">知りたい方</span>
-              <span class="color-main_string_red font_weight-500 text-5xl">」</span>
+              <span class="color-main_string_red font_weight-500 text-8xl">「信頼できる人物か</span>
+              <span class="text-6xl">知りたい方</span>
+              <span class="color-main_string_red font_weight-500 text-8xl">」</span>
             </header>
-            <div class="text-sm mt-10">
+            <div class="text-sm mt-20">
               婚約者やその家族について、人柄や評判、将来性、トラブルの有無、資産状況（収入・借金・金融資産等）、
               健康状態、交友関係、異性関係、家族・家柄・家系などのあらゆる事柄について調査を行ないます。
               結婚を予定している家族をお持ちのご両親・ご兄弟からのご相談も承っております。
@@ -219,11 +219,11 @@
         <div class="cases_list_item_inner">
           <div class="cases_list_item_content">
           <header>
-            <span class="color-main_purple font_weight-500 text-5xl">「ストーカー被害</span>
-            <span class="text-3xl">でお悩みの方</span>
-            <span class="color-main_purple font_weight-500 text-5xl">」</span>
+            <span class="color-main_purple font_weight-500 text-8xl">「ストーカー被害</span>
+            <span class="text-6xl">でお悩みの方</span>
+            <span class="color-main_purple font_weight-500 text-8xl">」</span>
           </header>
-          <div class="text-sm mt-10">
+          <div class="text-sm mt-20">
             「家族や友人にも相談できない」「警察に相談しても解決には至らなかった」などの理由で一人で悩みを抱えている方も少なくありません。
             気のせい、勘違いでも構いません。ストーカー被害に関するご相談に２４時間・無休で専任カウンセラーが対応しております。
             専門家に相談して良かったと思われるよう、ご相談にしっかりと耳を傾け、あなたに合った対策のご提案をさせていただきます。
@@ -919,7 +919,7 @@
   <section class="main_purple_grade-20">
     <div class="section_inner">
       <div class="center">
-        <h2 class="text-5xl section_border">探偵の基礎知識</p>
+        <h2 class="text-5xl section_border">探偵の基礎知識</h2>
         <p class="center text-base color-main_purple ">探偵利用ガイド</p>
       </div>
       <ul class="guide">
@@ -968,7 +968,227 @@
           </div>
         </div>
       </div>
+  </section>
 
+  <section>
+    <div class="section_inner">
+      <div class="center">
+        <h2 class="text-5xl section_border">ご相談・お問い合わせ</h2>
+      </div>
+    </div>
+    <form class="form">
+      <ul>
+        <li class="form_item">
+          <div class="form_item_inner">
+            <p class="form_title required">お問い合わせ項目</p>
+            <ul class="form_radio">
+              <li class="form_radio_item">
+                <input type="radio" id="huey" name="kind" value="huey"
+                        checked>
+                <label for="huey">相談</label>
+              </li>
+          
+              <li class="form_radio_item">
+                <input type="radio" id="dewey" name="kind" value="dewey">
+                <label for="dewey">見積り</label>
+              </li>
+          
+              <li class="form_radio_item">
+                <input type="radio" id="louie" name="kind" value="louie">
+                <label for="louie">面談希望</label>
+              </li>
+  
+              <li class="form_radio_item">
+                <input type="radio" id="louie" name="kind" value="louie">
+                <label for="louie">専門家紹介</label>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="form_item">
+          <div class="form_item_inner">
+            <label for="name" class="form_title required">お名前
+              <span class="text-xs">※匿名可能・ニックネームでも構いません</span>
+            </label>
+            <input type="text" id="name" name="name" placeholder="日本太郎" class="w-100"  required>
+          </div>
+        </li>
+
+        <li class="form_item">
+          <div class="form_item_inner">
+            <label for="region" class="form_title required">
+                お住まいの地域
+            </label>
+            <select name="region" id="region">
+              <option value="">--選択してください--</option>
+              <option value="dog">Dog</option>
+              <option value="cat">Cat</option>
+              <option value="hamster">Hamster</option>
+              <option value="parrot">Parrot</option>
+              <option value="spider">Spider</option>
+              <option value="goldfish">Goldfish</option>
+          </select>
+          </div>
+        </li>
+
+        <li class="form_item">
+          <div class="form_item_inner">
+            <label for="email" class="form_title required">Eメールアドレス</label>
+            <input type="email" id="email" name="email" placeholder="user@example.com" class="w-100" required>
+          </div>
+        </li>
+
+        <li class="form_item">
+          <div class="form_item_inner">
+            <label for="phone" class="form_title required">電話番号</label>
+            <input type="text" id="phone" name="phone" placeholder="user@example.com" class="w-50" required>
+          </div>
+        </li>
+
+        <li class="form_item">
+          <div class="form_item_inner">
+            <label for="age" class="form_title option">年齢</label>
+            <input type="text" id="age" name="age" placeholder="user@example.com" class="w-50" required>
+          </div>
+        </li>
+
+        <li class="form_item">
+          <div class="form_item_inner">
+            <p class="form_title option">性別</p>
+            <ul class="form_radio">
+              <li class="form_radio_item">
+                <input type="radio" id="male" name="sex" value="male"
+                      checked>
+                <label for="male">男性</label>
+              </li>
+          
+              <li class="form_radio_item">
+                <input type="radio" id="female" name="sex" value="female">
+                <label for="female">女性</label>
+              </li>
+            </ul>
+          </div> 
+        </li>
+
+        <li class="form_item">
+          <div class="form_item_inner">
+            <label for="content" class="form_title required">ご相談内容
+              <span class="text-xs">※お調べになりたい内容、お悩みごとなど</span>
+            </label>
+            <textarea id="content" name="content" rows="5" class="w-100">相談例
+            </textarea>
+          </div>
+        </li>
+
+        <li class="form_item">
+          <div class="form_item_inner">
+            <label for="information" class="form_title required">現時点の情報
+              <span class="text-xs">※お持ちの情報や心当たりなど分かる範囲で</span>
+            </label>
+            <textarea id="information" name="information" rows="5" class="w-100">相談例
+            </textarea>
+          </div>
+        </li>
+
+        <li class="form_item">
+          <div class="form_item_inner">
+            <label for="purpose" class="form_title required">目的・要望・質問
+              <span class="text-xs">※ご要望やご質問があればお聞かせください</span>
+            </label>
+            <textarea id="purpose" name="purpose" rows="5" class="w-100">相談例
+            </textarea>
+          </div>
+        </li>
+
+        <li class="form_item">
+          <div class="form_item_inner">
+            <label for="age" class="form_title option">希望予算</label>
+            <input type="text" id="age" name="age" placeholder="user@example.com" class="w-50">
+            円くらい
+          </div>
+        </li>
+
+        <li class="form_item">
+          <div class="form_item_inner">
+            <div class="form_title option">面談希望日時</div>
+            <ul>
+              <li>
+                <label for="first" class="">第一希望</label>
+                <input type="date" id="first" name="first" class="w-50">
+              </li>
+              <li>
+                <label for="second" class="">第二希望</label>
+                <input type="date" id="second" name="second" class="w-50">
+              </li>
+              <li>
+                <label for="third" class="">第三希望</label>
+                <input type="date" id="third" name="third" class="w-50">
+              </li>
+            </ul>
+          </div>
+        </li>
+        <div class="section_inner">
+          <p class="center text-lg font_weight-500">プライバシーポリシー</p>
+          <div class="form_privacy">
+            株式会社プライベートアイ（以下、当社）は、個人情報保護に関する法令およびその他の規範を遵守するとともに、以下のプライバシーポリシーを制定し個人情報保護を徹底いたします。
+            <div class="form_privacy_item">
+              <p class="form_privacy_title">１.適切な個人情報の収集および利用・提供の基準</p>
+              <p>
+                当社は、調査事業において、必要な範囲で個人情報を収集し、当社からの連絡や業務の案内やご質問に対する回答として、電子メールや資料の送付等に利用することがあります。
+                収集した個人情報は「個人情報保護に関する法律」等を遵守し、厳正な管理を行います。
+              </p>
+            </div>
+
+            <div class="form_privacy_item">
+              <p class="form_privacy_title">２.個人情報の安全管理・保護について</p>
+              <p>
+                当社は、個人情報への不正アクセス、個人情報の紛失、破壊、改ざん及び漏えいを防ぐため、必要かつ適切な安全管理対策を講じ、厳正な管理下で安全に取り扱います。
+              </p>
+            </div>
+
+            <div class="form_privacy_item">
+              <p class="form_privacy_title">３.個人情報の第三者への提供について</p>
+              <p>
+                原則として当社は収集した個人情報は厳重に管理し、ご本人の事前の了承なく第三者に開示することはありません。<br>
+                ただし、ご本人の事前の了承を得たうえでご本人が希望されるサービスを行なうために当社業務を委託する業者に対して開示する場合や
+                裁判所、検察庁、警察、 弁護士会、消費者センターまたはこれらに準じた権限を有する機関から、
+                個人情報の開示を求められた場合、当社はこれに応じて情報を開示することがあります。及び当社の権利や財産を保護する目的で開示することがあります。
+              </p>
+            </div>
+            
+            <div class="form_privacy_item">
+              <p class="form_privacy_title">４.個人情報はいつでも変更・訂正または削除できます</p>
+              <p>
+                当社は、ご本人からお申し出があったときは、ご本人様確認後登録情報の開示を行います。
+                また、お申し出があったときはご本人様確認後登録情報の追加・変更・訂正または削除を行います。 ただし、登録を削除すると提供できないサービスが発生する場合があります。
+              </p>
+            </div>
+            
+            <div class="form_privacy_item">
+              <p class="form_privacy_title">5.法令・規範の遵守と本ポリシーの継続的な改善について</p>
+              <p>
+                当社は、個人情報保護に関する法律・法令、その他の規範を遵守するとともに、本ポリシーの内容を適宜見直し、継続的な改善に努めます。
+              </p>
+            </div>
+            
+            <div class="form_privacy_item">
+              <p class="form_privacy_title">6.お問い合わせ</p>
+              <p>当社における個人情報保護に関してご質問などがある場合は、
+                こちら<span class="color-main_red"></span>（info@tantei-tpe.com）</span>からお問い合わせください。
+              </p>
+            </div>
+          </div>
+          <div class="center mt-20">
+            <input type="checkbox" id="agree" name="agree">
+            <label for="agree">プライバシーポリシーに同意する</label>
+          </div>
+          <div class="center mt-50">
+            <input type="submit" value="入力内容確認へ" class="form_submit main_purple_grade">
+          </div>
+        </div>
+      </ul>
+    </form>
   </section>
   <script
       src="https://code.jquery.com/jquery-3.5.1.min.js"
