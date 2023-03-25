@@ -1,6 +1,22 @@
-
-
-
+function hideHeader() {
+  $('#js-header_main').hide(200);
+  $('#js-header').addClass("hidden");
+  $("#js-child_list").addClass("header_hidden");
+}
+function showHeader() {
+  $('#js-header_main').show();
+  $('#js-header').removeClass("hidden");
+  $("#js-child_list").removeClass("header_hidden");
+}
+function headerHundler() {
+  if ($(window).width() > 769) {
+    if($(window).scrollTop() > 1) {
+      hideHeader();
+    } else {
+      showHeader();
+    }
+  }
+}
 
 $(document).ready(function(){
   $("#js-nav_menu").on("click", function(){
@@ -15,17 +31,12 @@ $(document).ready(function(){
     });
   }
   $(window).scroll(function () {
-    console.log($(window).scrollTop())
-    if ($(window).width() > 769) {
-      if($(window).scrollTop() > 1) {
-        $('#js-header_main').hide(200);
-        $('#js-header').addClass("hidden");
-        $("#js-child_list").addClass("header_hidden");
-      } else {
-        $('#js-header_main').show();
-        $('#js-header').removeClass("hidden");
-        $("#js-child_list").removeClass("header_hidden");
-      }
+    headerHundler();
+  });
+  $(window).resize(function () {
+    if ($(window).width() < 768) {
+      showHeader();
     }
   });
 });
+
