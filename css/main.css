@@ -1790,6 +1790,27 @@
   }
 }
 
+.primary_btn {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 2px 2px 15px 0 rgba(0, 0, 0, 0.2);
+  transition-duration: 0.2s;
+  font-size: 1.1875rem; /* 19px */
+  padding: 5px 50px;
+}
+.primary_btn:hover {
+  box-shadow: 0px 0px 8px 0 rgba(0, 0, 0, 0.5);
+}
+@media (min-width: 640px) {
+  .primary_btn {
+    font-size: 1.25rem; /* 20px */
+  }
+}
+.primary_btn:hover {
+  opacity: 0.8;
+}
+
 .kv {
   padding-top: 100px;
 }
@@ -1909,6 +1930,9 @@
   color: white;
   margin-right: 5px;
 }
+.header_offer_other_item:hover {
+  opacity: 0.8;
+}
 @media (min-width: 768px) {
   .header_offer_other_item {
     margin-right: 0;
@@ -1991,9 +2015,13 @@
   z-index: 100;
   padding: 20px;
   color: white;
+  transition-duration: 0.1s;
 }
 .global_nav .nav_menu_item:not(:last-child) {
   border-bottom: solid 1px white;
+}
+.global_nav .nav_menu_item:hover {
+  background: rgba(255, 255, 255, 0.3);
 }
 @media (min-width: 768px) {
   .global_nav .nav_menu_item {
@@ -2065,11 +2093,15 @@
 }
 .global_nav .nav_menu_item .child_list_item {
   background-color: white;
+  transition-duration: 0.2s;
   color: rgb(41, 57, 128);
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.global_nav .nav_menu_item .child_list_item:hover {
+  background-color: #d4d7e8;
 }
 .global_nav .nav_menu_item .child_list_item:not(:last-child) {
   border-bottom: solid 1px rgb(41, 57, 128);
@@ -2169,7 +2201,15 @@
   display: inline-flex;
   align-items: center;
   border-radius: 5px;
+  box-shadow: 2px 2px 15px 0 rgba(0, 0, 0, 0.2);
+  transition-duration: 0.2s;
   padding: 5px 20px;
+}
+.cases_list_item_btn:hover {
+  box-shadow: 0px 0px 8px 0 rgba(0, 0, 0, 0.5);
+}
+.cases_list_item_btn:hover {
+  opacity: 0.8;
 }
 .cases_list_item_btn_arrow {
   width: 20px;
@@ -2768,6 +2808,10 @@
   justify-content: space-between;
   margin-bottom: 10px;
   align-items: center;
+  transition-duration: 0.2s;
+}
+.survey_list_item:hover {
+  background-color: #d4d7e8;
 }
 .survey_list_item.main {
   flex-direction: column;
@@ -2835,15 +2879,23 @@
   display: inline-flex;
   align-items: center;
   border-radius: 5px;
+  box-shadow: 2px 2px 15px 0 rgba(0, 0, 0, 0.2);
+  transition-duration: 0.2s;
   font-size: 1.1875rem; /* 19px */
   color: white;
   border: solid 1px white;
   padding: 5px 50px;
 }
+.survey_list_btn:hover {
+  box-shadow: 0px 0px 8px 0 rgba(0, 0, 0, 0.5);
+}
 @media (min-width: 640px) {
   .survey_list_btn {
     font-size: 1.25rem; /* 20px */
   }
+}
+.survey_list_btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .voices_title_deco {
@@ -2854,19 +2906,6 @@
 @media (min-width: 768px) {
   .voices_title_deco {
     width: 7vw;
-  }
-}
-.voices_btn {
-  display: inline-flex;
-  align-items: center;
-  border-radius: 5px;
-  font-size: 1.1875rem; /* 19px */
-  color: white;
-  padding: 5px 50px;
-}
-@media (min-width: 640px) {
-  .voices_btn {
-    font-size: 1.25rem; /* 20px */
   }
 }
 
@@ -2943,6 +2982,9 @@
     font-size: 0.875rem; /* 14px */
   }
 }
+.step_item_offer_btn:hover {
+  opacity: 0.8;
+}
 @media (min-width: 640px) {
   .step_item_offer_btn {
     padding: 3px 15px 3px 5px;
@@ -2973,7 +3015,8 @@
 .guide_item {
   width: 48%;
   margin-bottom: 20px;
-  box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 15px 0 rgba(0, 0, 0, 0.2);
+  transition-duration: 0.2s;
   position: relative;
   background-color: white;
   border-radius: 5px;
@@ -2982,6 +3025,10 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+}
+.guide_item:hover {
+  background-color: #d4d7e8;
+  box-shadow: 0px 0px 8px 0 rgba(0, 0, 0, 0.5);
 }
 .guide_item:not(:nth-child(-n+2)) {
   margin-top: 40px;
@@ -3016,6 +3063,13 @@
 }
 .guide_item_img {
   width: 50px;
+}
+
+.contact_note {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 35px auto 0;
+  padding: 25px 35px;
 }
 
 .form * {
@@ -3144,12 +3198,20 @@
   display: inline-flex;
   align-items: center;
   border-radius: 5px;
+  box-shadow: 2px 2px 15px 0 rgba(0, 0, 0, 0.2);
+  transition-duration: 0.2s;
   font-size: 1.3125rem; /* 21px */
+}
+.form_submit:hover {
+  box-shadow: 0px 0px 8px 0 rgba(0, 0, 0, 0.5);
 }
 @media (min-width: 640px) {
   .form_submit {
     font-size: 1.375rem; /* 22px */
   }
+}
+.form_submit:hover {
+  opacity: 0.8;
 }
 
 .footer_logo {
@@ -3232,6 +3294,9 @@
     font-size: 0.75rem; /* 12px */
   }
 }
+.footer_item:hover {
+  text-decoration: underline;
+}
 
 .support {
   position: relative;
@@ -3251,7 +3316,8 @@
   padding-right: 20px;
   position: absolute;
   top: 200px;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 100%;
   height: 100%;
   display: flex;
@@ -3292,7 +3358,7 @@
   background-color: rgba(255, 255, 255, 0.8);
   box-shadow: 0px 2px 10px 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
-  padding: 10px 15px;
+  padding: 8px 15px;
   margin-bottom: 10px;
   width: 48%;
 }
@@ -3336,6 +3402,43 @@
     left: 5%;
   }
 }
+@media (min-width: 1236px) {
+  .support_list_item {
+    width: 170px;
+  }
+  .support_list_item.item-1 {
+    top: 100px;
+    right: 120px;
+  }
+  .support_list_item.item-2 {
+    top: 300px;
+    left: 550px;
+  }
+  .support_list_item.item-3 {
+    top: 450px;
+    right: 250px;
+  }
+  .support_list_item.item-4 {
+    top: 600px;
+    right: 400px;
+  }
+  .support_list_item.item-5 {
+    top: 400px;
+    left: 420px;
+  }
+  .support_list_item.item-6 {
+    top: 450px;
+    left: 200px;
+  }
+  .support_list_item.item-7 {
+    top: 650px;
+    left: 290px;
+  }
+  .support_list_item.item-8 {
+    top: 600px;
+    left: 50px;
+  }
+}
 @media (min-width: 1024px) {
   .support_list_item {
     width: 200px;
@@ -3352,6 +3455,16 @@
     font-size: 0.875rem; /* 14px */
   }
 }
+@media (min-width: 1024px) {
+  .support_list_item_name {
+    font-size: 0.9375rem; /* 15px */
+  }
+}
+@media (min-width: 1024px) and (min-width: 640px) {
+  .support_list_item_name {
+    font-size: 1rem; /* 16px */
+  }
+}
 .support_list_item_name::before {
   content: "■";
   width: 10px;
@@ -3362,5 +3475,15 @@
 @media (min-width: 640px) {
   .support_list_item_content {
     font-size: 0.75rem; /* 12px */
+  }
+}
+@media (min-width: 1024px) {
+  .support_list_item_content {
+    font-size: 0.8125rem; /* 13px */
+  }
+}
+@media (min-width: 1024px) and (min-width: 640px) {
+  .support_list_item_content {
+    font-size: 0.875rem; /* 14px */
   }
 }/*# sourceMappingURL=main.css.map */
