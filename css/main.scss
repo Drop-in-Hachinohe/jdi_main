@@ -494,6 +494,37 @@ $commonRed: #df3c23;
   }
 }
 
+// フリーダイアル
+.free_dial {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &_icon {
+    width: 50px;
+    padding-right: 5px;
+  }
+}
+
+// メールやLINEで相談
+.offer {
+  &_item {
+    display: flex;
+    padding: 0 10px;
+    border-radius: 10px;
+    align-items: center;
+    color: white;
+    margin-right: 5px;
+    @include btn_hover_opacity;
+    @media (min-width: 768px) {
+      margin-right: 0;
+    }
+  }
+  &_icon {
+    width: 30px;
+    padding: 3px;
+  }
+}
+
 .belt_message {
   text-align: center;
   display: flex;
@@ -591,14 +622,6 @@ $commonRed: #df3c23;
       display: flex;
       flex-direction: column;
       padding-right: 10px;
-      &_number {
-        display: flex;
-        align-items: center;
-      }
-      &_icon {
-        width: 50px;
-        padding-right: 5px;
-      }
       &_caption {
         border-radius: 10px;
         text-align: center;
@@ -612,12 +635,6 @@ $commonRed: #df3c23;
         display: block;
       }
       &_item {
-        display: flex;
-        padding: 0 10px;
-        border-radius: 10px;
-        align-items: center;
-        color: white;
-        margin-right: 5px;
         @include btn_hover_opacity;
         @media (min-width: 768px) {
           margin-right: 0;
@@ -627,10 +644,6 @@ $commonRed: #df3c23;
             margin-bottom: 5px;
           }
         }
-      }
-      &_icon {
-        width: 30px;
-        padding: 3px;
       }
     }
   }
@@ -1666,28 +1679,28 @@ $commonRed: #df3c23;
           right: 10%;
         }
         &.item-2 {
-          top: 13%;
+          top: 5%;
           left: 40%;
         }
         &.item-3 {
-          top: 30%;
-          right: 22%;
+          top: 29%;
+          right: 15%;
         }
         &.item-4 {
           top: 42%;
-          right: 30%;
+          right: 26%;
         }
         &.item-5 {
-          top: 25%;
+          top: 19%;
           left: 35%;
         }
         &.item-6 {
-          top: 30%;
-          left: 15%;
+          top: 20%;
+          left: 10%;
         }
         &.item-7 {
           top: 45%;
-          left: 30%;
+          left: 29%;
         }
         &.item-8 {
           top: 45%;
@@ -1753,5 +1766,84 @@ $commonRed: #df3c23;
       }
     }
   }
- 
+}
+
+.fixed_bannar {
+  position: fixed;
+  z-index: 100;
+  bottom: 0;
+  width: 100%;
+}
+
+.fixed_bannar_pc {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 -2px 10px 0 rgba(0,0,0,.2);
+  &_img {
+    width: 9%;
+    object-fit: cover;
+  }
+  &_message {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 5px;
+    letter-spacing: -1px;
+    &_caption {
+      border-radius: 10px;
+      text-align: center;
+      padding: 0 10px;
+      color: white;
+      background-color: $mainPurple;
+    }
+  }
+  &_dial {
+    width: 26%;
+    &_number {
+      letter-spacing: -1px;
+      @include text-3xl;
+      @media (min-width: 1024px) {
+        @include text-4xl;
+        letter-spacing: normal;
+      }
+    }
+  }
+  &_mail {
+    width: 20%;
+    padding: 0 5px;
+    @include text-sm;
+    @media (min-width: 1024px) {
+      @include text-base;
+    }
+  }
+}
+
+.fixed_bannar_sp {
+  &_offer {
+    display: flex;
+    background-color: $mainPurple;
+    color: white;
+    .offer_list_item {
+      width: 50%;
+      padding: 5px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      @include text-base;
+      @media (min-width: 500px) {
+        @include text-2xl;
+      }
+      &:first-child {
+        border-right: solid 1px white;
+      }
+    }
+  }
+  &_info {
+    background-color: white;
+    text-align: center;
+    @include text-sm;
+  }
 }
