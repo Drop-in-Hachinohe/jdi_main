@@ -1772,6 +1772,7 @@
   border-radius: 10px;
   align-items: center;
   color: white;
+  justify-content: center;
   margin-right: 5px;
 }
 .offer_item:hover {
@@ -2742,6 +2743,12 @@
 @media (min-width: 768px) {
   .feature_item_sign {
     top: -10px;
+    left: 1%;
+  }
+}
+@media (min-width: 1024px) {
+  .feature_item_sign {
+    left: 6%;
   }
 }
 .feature_item_sign_number {
@@ -3504,14 +3511,22 @@
   z-index: 100;
   bottom: 0;
   width: 100%;
+  box-shadow: 0 -2px 10px 0 rgba(0, 0, 0, 0.2);
 }
 
 .fixed_bannar_pc {
+  background-color: white;
+}
+.fixed_bannar_pc_inner {
   height: 70px;
   display: flex;
   align-items: center;
-  background-color: white;
-  box-shadow: 0 -2px 10px 0 rgba(0, 0, 0, 0.2);
+}
+@media (min-width: 1000px) {
+  .fixed_bannar_pc_inner {
+    width: 1000px;
+    margin: 0 auto;
+  }
 }
 .fixed_bannar_pc_img {
   width: 9%;
