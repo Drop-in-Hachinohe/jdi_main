@@ -364,6 +364,9 @@ $commonRed: #df3c23;
 .marker-pink {
   @include marker($markerPink);
 }
+.marker-main_purple {
+  @include marker(rgba(41,57, 128, .2));
+}
 
 
 // 共通
@@ -549,37 +552,147 @@ $commonRed: #df3c23;
 
 // キービジュアル
 .kv {
-  padding-top: 100px;
-  @media (min-width: 800px) {
-    display: flex;
-    min-height: 600px;
+  margin-top: 50px;
+  background: url("../images/kv.png"),linear-gradient(90deg, rgba(78,103,162,1) 0%, rgba(128,141,195,0) 90%);
+  background-position: top right;
+  background-size: 120%;
+  background-repeat: no-repeat;
+  @media (min-width: 640px) {
+    background-size: 100%;
+  }
+  @media (min-width: 768px) {
+    margin-top: 140px;
+  }
+  @media (min-width: 900px) {
+    background-position: top 10% right;
+  }
+  &_wrapper {
+    padding-bottom: 20px
+  }
+  &_inner {
+    @include sectionX_padding;
+    padding-top: 200px;
+    padding-bottom: 20px;
+    @media (min-width: 640px) {
+      display: flex;
+      align-items: center;
+      padding-top: 80px;
+      padding-bottom: 30px;
+      max-width: 75%;
+    }
+    @media (min-width: 768px) {
+      margin-top: 140px;
+      padding-top: 100px;
+      padding-bottom: 50px;
+    }
+    @media (min-width: 1024px) {
+      padding-top: 150px;
+      padding-bottom: 60px;
+      margin: 0;
+      max-width: 80%;
+    }
+    @media (min-width: 1236px) {
+      padding-top: 170px;
+      padding-bottom: 100px;
+      margin: 0;
+      max-width: 80%;
+    }
   }
   &_message {
+    background: linear-gradient(45deg, rgba(41,57,128,1) 0%, rgba(41,57,128,0.8) 100%);
+    border-radius: 10px;
     padding: 20px;
-    display: flex;
-    align-items: center;
-    @media (min-width: 800px) {
-      padding: 20px 20px 20px 5%;
+    width: fit-content;
+    position: relative;
+    z-index: 1;
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-color: white;
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      border-radius: 10px;
     }
+    @media (min-width: 640px) {
+      padding: 30px 35px 35px;
+    }
+    @media (min-width: 1024px) {
+      padding: 35px 40px 45px;
+    }
+    
     &_sub {
-    }
-    &_main {
+      font-size: 16px;
+      @media (min-width: 640px) {
+        font-size: 20px;
+      }
+      @media (min-width: 768px) {
+        font-size: 22px;
+      }
+      @media (min-width: 1024px) {
+        font-size: 24px;
+      }
       display: inline-block;
-      color: white;
-      padding: 5px 10px;
-      font-weight: 700;
-      .name {
-        font-size: 2rem; 
-        // @media (min-width: 580px) {
-        //   font-size: 2.5rem;
-        // }
-        @media (min-width: 768px) {
-          font-size: 2.5rem;
+      border-bottom: solid 1px $mainStringRed;
+      font-weight: 500;
+      .dot {
+        font-weight: 700;
+        position: relative;
+        &::after {
+          content: "・";
+          color: $mainStringRed;
+          position: absolute;
+          left: 0;
+          top: -80%;
         }
       }
     }
-    @media (min-width: 768px) {
-      width: 65%;
+    &_main {
+      font-size: 15px;
+      @media (min-width: 640px) {
+        font-size: 18px;
+      }
+      @media (min-width: 768px) {
+        font-size: 20px;
+      }
+      .emphasis {
+        font-size: 25px;
+        font-weight: 700;
+        @media (min-width: 640px) {
+          font-size: 30px;
+        }
+        @media (min-width: 768px) {
+          font-size: 35px;
+        }
+        @media (min-width: 1024px) {
+          font-size: 38px;
+        }
+        @media (min-width: 1236px) {
+          font-size: 45px;
+        }
+      }
+    }
+  }
+  &_belt {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    &_inner {
+      @include sectionX_padding;
+      text-align: center;
+      color: white;
+      font-size: 15px;
+      @media (min-width: 640px) {
+        font-size: 18px;
+      }
+      @media (min-width: 768px) {
+        font-size: 20px;
+      }
+      @media (min-width: 1024px) {
+        font-size: 22px;
+      }
     }
   }
 }
@@ -593,6 +706,7 @@ $commonRed: #df3c23;
   z-index: 101;
   height: 50px;
   background-color: white;
+  top: 0;
   @media (min-width: 768px) {
     height: 140px;
     &.hidden {
@@ -615,7 +729,7 @@ $commonRed: #df3c23;
     &_logo {
       height: 50px;
       @media (min-width: 768px) {
-        height: 80px;
+        height: 78px;
       }
       @media (min-width: 1024px) {
         height: 90px;
@@ -733,6 +847,14 @@ $commonRed: #df3c23;
         align-items: center;
         .global_nav_logo {
           display: flex;
+        }
+        
+      }
+    }
+    @media (max-width: 1024px) {
+      &.logo_show {
+        .nav_menu_item {
+          font-size: 12px;
         }
       }
     }
