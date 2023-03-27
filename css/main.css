@@ -2512,7 +2512,7 @@
   }
 }
 .last_offer_dial_number {
-  font-size: 35px;
+  font-size: 33px;
   font-weight: 700;
 }
 @media (min-width: 640px) {
@@ -2747,15 +2747,22 @@
 }
 .feature_item_sign {
   position: absolute;
-  width: 120px;
-  height: 120px;
+  width: 90px;
+  height: 90px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
   top: 0px;
-  left: 6%;
+  left: 1%;
+}
+@media (min-width: 640px) {
+  .feature_item_sign {
+    width: 120px;
+    height: 120px;
+    left: 6%;
+  }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .feature_item_sign {
@@ -2801,11 +2808,16 @@
   }
 }
 .feature_item_content_header {
-  margin-left: 150px;
+  margin-left: 90px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 120px;
+}
+@media (min-width: 640px) {
+  .feature_item_content_header {
+    margin-left: 150px;
+  }
 }
 @media (min-width: 768px) {
   .feature_item_content_header {
