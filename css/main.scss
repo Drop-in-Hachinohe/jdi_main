@@ -247,9 +247,10 @@ $commonRed: #df3c23;
     box-shadow: 0px 0px 8px 0 rgba(0,0,0,.5);
   }
 }
-@mixin btn_hover_opacity {
+@mixin btn_hover_motion {
+  transition-duration: .2s;
   &:hover {
-    opacity: .8;
+    transform: translateY(3px);
   }
 }
 
@@ -500,8 +501,11 @@ $commonRed: #df3c23;
   align-items: center;
   justify-content: center;
   &_icon {
-    width: 50px;
+    width: 45px;
     padding-right: 5px;
+    @media (min-width: 1024px) {
+      width: 50px;
+    }
   }
 }
 
@@ -515,7 +519,7 @@ $commonRed: #df3c23;
     color: white;
     justify-content: center;
     margin-right: 5px;
-    @include btn_hover_opacity;
+    @include btn_hover_motion;
     @media (min-width: 768px) {
       margin-right: 0;
     }
@@ -537,7 +541,7 @@ $commonRed: #df3c23;
 .primary_btn {
   @include btn;
   @include text-xl;
-  @include btn_hover_opacity;
+  @include btn_hover_motion;
   padding: 5px 50px;
 }
 
@@ -588,11 +592,16 @@ $commonRed: #df3c23;
   box-shadow: 0px 2px 10px 0 rgba(0,0,0,.2);
   z-index: 101;
   height: 50px;
-
+  background-color: white;
   @media (min-width: 768px) {
     height: 140px;
     &.hidden {
       height: 50px;
+    }
+  }
+  &_inner {
+    @media (min-width: 640px) {
+      @include sectionX_padding;
     }
   }
   &_main {
@@ -604,15 +613,17 @@ $commonRed: #df3c23;
       height: 90px;
     }
     &_logo {
-      width: 50px;
-      padding: 2%;
+      height: 50px;
       @media (min-width: 768px) {
-        width: 80px;
+        height: 80px;
       }
-    }
-    &_logo_area {
-      display: flex;
-      align-items: center;
+      @media (min-width: 1024px) {
+        height: 90px;
+      }
+      &_area {
+        display: flex;
+        align-items: center;
+      }
     }
   }
   &_offer {
@@ -636,7 +647,12 @@ $commonRed: #df3c23;
         display: block;
       }
       &_item {
-        @include btn_hover_opacity;
+        @media (max-width: 767px) {
+          width: 45px;
+          height: 45px;
+          border-radius: 50%;
+        }
+        @include btn_hover_motion;
         @media (min-width: 768px) {
           margin-right: 0;
         }
@@ -652,10 +668,11 @@ $commonRed: #df3c23;
     border: solid 1px $mainPurple;
     border-radius: 5px;
     position: relative;
-    width: 80px;
+    width: 50px;
     height: 45px;
     &:after {
       content: "メニュー";
+      font-size: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -694,43 +711,44 @@ $commonRed: #df3c23;
 
 .global_nav {
   width: 100%;
-  display: none;
-  position: relative;
-  &.active {
-    display: block;
-  }
   @media (min-width: 768px) {
     display: flex;
     justify-content: center;
     height: 50px;
-    &.logo_show {
-      justify-content: flex-end;
-      .global_nav_logo {
-        display: flex;
+  }
+  &_inner {
+    display: none;
+    position: relative;
+    @include sectionX_padding;
+    &.active {
+      display: block;
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    justify-content: center;
+    @media (min-width: 768px) {
+      display: flex;
+      &.logo_show {
+        justify-content: space-between;
+        align-items: center;
+        .global_nav_logo {
+          display: flex;
+        }
       }
     }
   }
   &_logo {
     display: none;
-    position: absolute;
-    left: 2.5px;
-    top: 2.5px;
-    background-color: white;
-    align-items: center;
     height: 45px;
     padding: 0 10px;
-    &_caption {
-      font-size: 10px;
-    }
-    &_img {
-      width: 30px;
-    }
   }
   .nav_menu {
     max-height: calc(100vh - 50px);
     overflow: scroll;
+    width: 100%;
     @media (min-width: 768px) {
       display: flex;
+      justify-content: center;
     }
     &_item {
       &:not(:last-child) {
@@ -897,7 +915,7 @@ $commonRed: #df3c23;
       }
       &_btn {
         @include btn;
-        @include btn_hover_opacity;
+        @include btn_hover_motion;
         padding: 5px 20px;
         &_arrow {
           width: 20px;
@@ -1458,7 +1476,7 @@ $commonRed: #df3c23;
         display: inline-flex;
         margin-right: 10px;
         @include text-sm;
-        @include btn_hover_opacity;
+        @include btn_hover_motion;
         align-items: center;
         @media (min-width: 640px) {
           padding: 3px 15px 3px 5px;
@@ -1616,7 +1634,7 @@ $commonRed: #df3c23;
     padding: 10px 30px;
     @include btn;
     @include text-2xl;
-    @include btn_hover_opacity;
+    @include btn_hover_motion;
   }
 }
 
