@@ -1887,7 +1887,7 @@
   height: 90px;
   position: fixed;
   box-shadow: 0px 2px 10px 0 rgba(0, 0, 0, 0.2);
-  z-index: 100;
+  z-index: 101;
   height: 50px;
 }
 @media (min-width: 768px) {
@@ -2047,6 +2047,7 @@
 }
 .global_nav .nav_menu_item {
   position: relative;
+  display: block;
   z-index: 100;
   padding: 20px;
   color: white;
@@ -2134,6 +2135,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media (max-width: 767px) {
+  .global_nav .nav_menu_item .child_list_item:first-child {
+    width: 100%;
+  }
 }
 .global_nav .nav_menu_item .child_list_item:hover {
   background-color: #d4d7e8;
