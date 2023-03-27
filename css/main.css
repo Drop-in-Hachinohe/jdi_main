@@ -2002,6 +2002,7 @@
 .global_nav {
   width: 100%;
   display: none;
+  position: relative;
 }
 .global_nav.active {
   display: block;
@@ -2012,6 +2013,28 @@
     justify-content: center;
     height: 50px;
   }
+  .global_nav.logo_show {
+    justify-content: flex-end;
+  }
+  .global_nav.logo_show .global_nav_logo {
+    display: flex;
+  }
+}
+.global_nav_logo {
+  display: none;
+  position: absolute;
+  left: 2.5px;
+  top: 2.5px;
+  background-color: white;
+  align-items: center;
+  height: 45px;
+  padding: 0 10px;
+}
+.global_nav_logo_caption {
+  font-size: 10px;
+}
+.global_nav_logo_img {
+  width: 30px;
 }
 .global_nav .nav_menu {
   max-height: calc(100vh - 50px);
@@ -3626,9 +3649,19 @@
 .fixed_bannar_sp_info {
   background-color: white;
   text-align: center;
-  font-size: 0.8125rem; /* 13px */
+  font-size: 0.6875rem; /* 11px */
 }
 @media (min-width: 640px) {
+  .fixed_bannar_sp_info {
+    font-size: 0.75rem; /* 12px */
+  }
+}
+@media (min-width: 640px) {
+  .fixed_bannar_sp_info {
+    font-size: 0.8125rem; /* 13px */
+  }
+}
+@media (min-width: 640px) and (min-width: 640px) {
   .fixed_bannar_sp_info {
     font-size: 0.875rem; /* 14px */
   }

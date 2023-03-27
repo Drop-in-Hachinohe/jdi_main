@@ -695,6 +695,7 @@ $commonRed: #df3c23;
 .global_nav {
   width: 100%;
   display: none;
+  position: relative;
   &.active {
     display: block;
   }
@@ -702,6 +703,28 @@ $commonRed: #df3c23;
     display: flex;
     justify-content: center;
     height: 50px;
+    &.logo_show {
+      justify-content: flex-end;
+      .global_nav_logo {
+        display: flex;
+      }
+    }
+  }
+  &_logo {
+    display: none;
+    position: absolute;
+    left: 2.5px;
+    top: 2.5px;
+    background-color: white;
+    align-items: center;
+    height: 45px;
+    padding: 0 10px;
+    &_caption {
+      font-size: 10px;
+    }
+    &_img {
+      width: 30px;
+    }
   }
   .nav_menu {
     max-height: calc(100vh - 50px);
@@ -1855,7 +1878,11 @@ $commonRed: #df3c23;
   &_info {
     background-color: white;
     text-align: center;
-    @include text-sm;
+    @include text-xs;
+    @media (min-width: 640px) {
+      @include text-sm;
+    }
+    
   }
 }
 
