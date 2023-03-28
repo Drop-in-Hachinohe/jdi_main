@@ -1614,6 +1614,34 @@ $commonRed: #df3c23;
   }
 }
 
+.faq {
+  &_item {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+    &_question {
+      @include text-lg;
+      font-weight: 500;
+      line-height: 1.3;
+      color: $mainPurple;
+      &::before {
+        content: "Q";
+        font-family: "Avant Garde";
+        color: $mainPurple;
+        font-size: 30px;
+        margin-right: 10px;
+      }
+    }
+    &_answer {
+      @include text-sm;
+      background-color: #f0f0f0;
+      margin-top: 10px;
+      padding: 10px 15px;
+      border-radius: 10px;
+    }
+  }
+}
+
 .step {
   &_item {
     background-color: white;
@@ -1685,7 +1713,6 @@ $commonRed: #df3c23;
    
   }
 }
-
 
 .guide {
   margin-top: 70px;
