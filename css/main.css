@@ -2434,8 +2434,40 @@
     padding: 10px;
     background: rgb(41, 57, 128);
     background: linear-gradient(45deg, rgb(41, 57, 128) 0%, rgba(41, 57, 128, 0.8) 100%);
+  }
+}
+@media (min-width: 768px) {
+  .global_nav .nav_menu_item .child_list_inner {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+}
+@media (min-width: 768px) and (min-width: 640px) {
+  .global_nav .nav_menu_item .child_list_inner {
+    padding-left: 7vw;
+    padding-right: 7vw;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  .global_nav .nav_menu_item .child_list_inner {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+}
+@media (min-width: 768px) and (min-width: 1024px) {
+  .global_nav .nav_menu_item .child_list_inner {
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+}
+@media (min-width: 768px) and (min-width: 1236px) {
+  .global_nav .nav_menu_item .child_list_inner {
+    width: 1200px;
+    margin: 0 auto;
   }
 }
 @media (min-width: 768px) {
@@ -3386,7 +3418,6 @@
 .guide {
   margin-top: 70px;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
 }
 .guide_item {
@@ -3410,12 +3441,24 @@
 .guide_item:not(:nth-child(-n+2)) {
   margin-top: 40px;
 }
-@media (min-width: 640px) {
+.guide_item:nth-child(odd) {
+  margin-right: 10px;
+}
+@media (min-width: 768px) {
   .guide_item {
     width: 24%;
   }
   .guide_item:not(:nth-child(-n+2)) {
     margin-top: 0;
+  }
+  .guide_item:not(:nth-child(-n+4)) {
+    margin-top: 40px;
+  }
+  .guide_item:nth-child(odd) {
+    margin-right: 0;
+  }
+  .guide_item:not(:nth-child(4n)) {
+    margin-right: 1vw;
   }
 }
 .guide_item_sign {
@@ -3437,6 +3480,12 @@
 }
 .guide_item_title {
   transform: translateY(-40px);
+  font-size: 1.0625rem; /* 17px */
+}
+@media (min-width: 640px) {
+  .guide_item_title {
+    font-size: 1.125rem; /* 18px */
+  }
 }
 .guide_item_img {
   width: 50px;
@@ -3593,21 +3642,18 @@
 }
 
 .footer_logo {
-  width: 50px;
-  padding: 2%;
+  width: 100%;
+  padding-bottom: 2%;
+}
+@media (min-width: 640px) {
+  .footer_logo {
+    width: 200px;
+  }
 }
 @media (min-width: 768px) {
   .footer_logo {
-    width: 80px;
+    width: 250px;
   }
-}
-.footer_logo_area {
-  display: flex;
-  align-items: center;
-  background-color: white;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding-right: 15px;
 }
 .footer_list {
   margin-bottom: 30px;

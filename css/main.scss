@@ -989,8 +989,14 @@ $commonRed: #df3c23;
           padding: 10px;
           background: rgb(41,57,128);
           background: linear-gradient(45deg, rgba(41,57,128,1) 0%, rgba(41,57,128,0.8) 100%);
-          flex-wrap: wrap;
-          justify-content: space-between;
+        }
+        &_inner {
+          @media (min-width: 768px) {
+            @include sectionX_padding;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+          }
         }
         &.header_hidden {
           @media (min-width: 768px) {
@@ -1662,10 +1668,10 @@ $commonRed: #df3c23;
   }
 }
 
+
 .guide {
   margin-top: 70px;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   &_item {
     width: 48%;
@@ -1679,10 +1685,22 @@ $commonRed: #df3c23;
     &:not(:nth-child(-n+2)) {
       margin-top: 40px;
     }
-    @media (min-width: 640px) {
+    &:nth-child(odd) {
+      margin-right: 10px;
+    }
+    @media (min-width: 768px) {
       width: 24%;
       &:not(:nth-child(-n+2)) {
         margin-top: 0;
+      }
+      &:not(:nth-child(-n+4)) {
+        margin-top: 40px;
+      }
+      &:nth-child(odd) {
+        margin-right: 0;
+      }
+      &:not(:nth-child(4n)) {
+        margin-right: 1vw;
       }
     }
     position: relative;
@@ -1707,6 +1725,7 @@ $commonRed: #df3c23;
     }
     &_title {
       transform: translateY(-40px);
+      @include text-lg;
     }
     &_img {
       width: 50px;
@@ -1807,18 +1826,14 @@ $commonRed: #df3c23;
 
 .footer {
   &_logo {
-    width: 50px;
-    padding: 2%;
-    @media (min-width: 768px) {
-      width: 80px;
+    width: 100%;
+    padding-bottom: 2%;
+    @media (min-width: 640px) {
+      width: 200px;
     }
-  }
-  &_logo_area {
-    display: flex;
-    align-items: center;
-    background-color: white;
-    width: fit-content;
-    padding-right: 15px;
+    @media (min-width: 768px) {
+      width: 250px;
+    }
   }
   &_list {
     margin-bottom: 30px;
