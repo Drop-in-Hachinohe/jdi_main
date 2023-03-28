@@ -1831,6 +1831,11 @@
     margin: 0 auto;
   }
 }
+@media (min-width: 1236px) {
+  .belt_message {
+    letter-spacing: -1px;
+  }
+}
 
 .primary_btn {
   display: inline-flex;
@@ -2628,6 +2633,11 @@
     justify-content: center;
   }
 }
+@media (min-width: 768px) and (min-width: 1024px) {
+  .first_offer_message {
+    width: 60%;
+  }
+}
 .first_offer_message_main {
   font-size: 1.3125rem; /* 21px */
 }
@@ -2658,10 +2668,23 @@
 }
 .first_offer_message_sub {
   padding-top: 35px;
+  font-weight: 500;
+  font-size: 1.0625rem; /* 17px */
+}
+@media (min-width: 640px) {
+  .first_offer_message_sub {
+    font-size: 1.125rem; /* 18px */
+  }
 }
 @media (min-width: 768px) {
   .first_offer_message_sub {
     padding-top: 30px;
+    font-size: 1.1875rem; /* 19px */
+  }
+}
+@media (min-width: 768px) and (min-width: 640px) {
+  .first_offer_message_sub {
+    font-size: 1.25rem; /* 20px */
   }
 }
 .first_offer_img {
@@ -2802,7 +2825,7 @@
 }
 @media (min-width: 1236px) {
   .last_offer_message_main {
-    font-size: 35px;
+    font-size: 34px;
   }
 }
 .last_offer_message_sub {
@@ -2875,7 +2898,7 @@
 }
 @media (min-width: 1236px) {
   .last_offer_dial_caption {
-    font-size: 45px;
+    font-size: 43px;
   }
 }
 .last_offer_dial_icon {

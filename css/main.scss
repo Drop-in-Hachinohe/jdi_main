@@ -538,7 +538,10 @@ $commonRed: #df3c23;
   display: flex;
   align-items: center;
   justify-content: center;
-  @include sectionX_padding
+  @include sectionX_padding;
+  @media (min-width: 1236px) {
+    letter-spacing: -1px;
+  }
 }
 
 .primary_btn {
@@ -1115,6 +1118,9 @@ $commonRed: #df3c23;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      @media (min-width: 1024px) {
+        width: 60%;
+      }
     }
     &_main {
       @include text-2xl;
@@ -1127,8 +1133,11 @@ $commonRed: #df3c23;
     }
     &_sub {
       padding-top: 35px;
+      font-weight: 500;
+      @include text-lg;
       @media (min-width: 768px) {
         padding-top: 30px;
+        @include text-xl;
       }
     }
   }
@@ -1218,7 +1227,7 @@ $commonRed: #df3c23;
         letter-spacing: normal;
       }
       @media (min-width: 1236px) {
-        font-size: 35px;
+        font-size: 34px;
       }
     }
     &_sub {
@@ -1272,7 +1281,7 @@ $commonRed: #df3c23;
         font-size: 40px;
       }
       @media (min-width: 1236px) {
-        font-size: 45px;
+        font-size: 43px;
       }
     }
     &_icon {
