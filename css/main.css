@@ -1856,14 +1856,15 @@
 
 .kv {
   margin-top: 50px;
-  background: url("../images/kv.png"), linear-gradient(90deg, rgb(78, 103, 162) 0%, rgba(128, 141, 195, 0) 90%);
+  background-image: url("../images/kv_sp.jpg");
   background-position: top right;
-  background-size: 120%;
+  background-size: 100%;
   background-repeat: no-repeat;
 }
 @media (min-width: 640px) {
   .kv {
-    background-size: 100%;
+    background-size: 120%;
+    background-image: url("../images/kv.jpg");
   }
 }
 @media (min-width: 768px) {
@@ -1873,6 +1874,7 @@
 }
 @media (min-width: 900px) {
   .kv {
+    background-size: 100%;
     background-position: top 10% right;
   }
 }
@@ -1883,7 +1885,7 @@
   width: 100%;
   padding-left: 20px;
   padding-right: 20px;
-  padding-top: 200px;
+  padding-top: 300px;
   padding-bottom: 20px;
 }
 @media (min-width: 640px) {
@@ -2218,25 +2220,45 @@
     margin-bottom: 5px;
   }
 }
-.header_menu_btn {
-  border: solid 1px rgb(41, 57, 128);
-  border-radius: 5px;
+.header_hamburger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  width: 50px;
+  box-sizing: content-box;
+  padding: 0;
+  width: 45px;
   height: 45px;
 }
-.header_menu_btn:after {
-  content: "メニュー";
-  font-size: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.header_hamburger span {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  background: rgb(41, 57, 128);
+  width: 30px;
+  height: 3px;
+  transition: 0.3s ease-out;
 }
-.header_menu_btn.opened:after {
-  content: "閉じる";
+.header_hamburger span:nth-of-type(1) {
+  top: 10px;
+}
+.header_hamburger span:nth-of-type(2) {
+  top: 22px;
+}
+.header_hamburger span:nth-of-type(3) {
+  top: 34px;
+}
+.header_hamburger.opened span {
+  transition: 0.3s ease-out;
+}
+.header_hamburger.opened span:nth-of-type(1) {
+  transform: translateY(9px) rotate(-45deg);
+  top: 12px;
+}
+.header_hamburger.opened span:nth-of-type(2) {
+  display: none;
+}
+.header_hamburger.opened span:nth-of-type(3) {
+  transform: translateY(-9px) rotate(45deg);
+  top: 30px;
 }
 
 @keyframes slide_open-sp {
