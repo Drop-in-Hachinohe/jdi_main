@@ -539,7 +539,7 @@ $commonRed: #df3c23;
   align-items: center;
   justify-content: center;
   @include sectionX_padding;
-  @media (min-width: 1236px) {
+  @media (min-width: 1024px) {
     letter-spacing: -1px;
   }
 }
@@ -1102,25 +1102,52 @@ $commonRed: #df3c23;
   }
 }
 
+
+@mixin sectionX_padding {
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  @media (min-width: 640px) {
+    padding-left: 7vw;
+    padding-right: 7vw;
+  }
+  @media (min-width: 768px) {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+  @media (min-width: 1024px) {
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+  @media (min-width: 1236px) {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
+
 .first_offer {
   width: 100%;
   @media (min-width: 768px) {
     display: flex;
     justify-content: space-between;
   }
+ 
   &_message {
     width: 100%;
-    padding: 20px;
+    padding: 35px 20px;
+    @media (min-width: 640px) {
+      padding-left: 7vw;
+    }
     @media (min-width: 768px) {
       width: 70%;
       padding-bottom: 0;
-      padding-left: 10vw;
+      padding: 70px 10px 70px 5vw;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      @media (min-width: 1024px) {
-        width: 60%;
-      }
+    }
+    @media (min-width: 1024px) {
+      padding: 70px 10px 70px 10vw;
     }
     &_main {
       @include text-2xl;
