@@ -3342,6 +3342,7 @@
   color: white;
   border: solid 1px white;
   padding: 5px 50px;
+  transition-duration: 0.2s;
 }
 .survey_list_btn:hover {
   box-shadow: 0px 0px 8px 0 rgba(0, 0, 0, 0.5);
@@ -3352,7 +3353,7 @@
   }
 }
 .survey_list_btn:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(3px);
 }
 
 .voices_title_deco {
