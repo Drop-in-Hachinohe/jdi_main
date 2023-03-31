@@ -1,5 +1,7 @@
 // 変数定義
 $mainPurple: rgb(41,57, 128);
+$mainPurple-10: rgba(41,57, 128, .1);
+$mainPurple-50: rgba(41,57, 128, .5);
 $mainStringRed: #d96666;
 $mainRed: #b9272d;
 $markerPink: rgba(234, 147, 132, .5);
@@ -2195,4 +2197,89 @@ $commonRed: #df3c23;
     bottom: 80px;
   }
 
+}
+
+// 記事ページ
+.post {
+  padding-top: 100px;
+  @media (min-width: 768px) {
+    padding-top: 200px;
+  }
+  * {
+    line-height: 1.8;
+  }
+  h1 {
+    @include text-5xl;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  h2 {
+    @include text-2xl;
+    position: relative;
+    padding: 5px 10px 5px 20px;
+    margin: 35px 0 15px;
+    background-color: $mainPurple-10;
+    font-weight: 500;
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 100%;
+      background: $mainPurple;
+      position: absolute;
+      transform: translateY(-50%);
+      top: 50%;
+      left: 0
+    }
+  }
+  h3 {
+    @include text-xl;
+    font-weight: 500;
+    margin: 30px 0 20px;
+    border-bottom: solid 2px $mainPurple;
+    width: fit-content;
+  }
+  h4 {
+    @include text-lg;
+    margin: 25px 0 15px;
+    font-weight: 500;
+    border-bottom: dotted 1px $mainPurple-50;
+  }
+  h5 {
+    @include text-base;
+    margin: 15px 0 10px;
+    font-weight: 500;
+  }
+  h6 {
+    @include text-sm();
+    font-weight: 500;
+  }
+
+  img {
+    max-width: 100%;
+  }
+  p {
+    @include text-base;
+    color: $stringGray;
+  }
+  a {
+    color: $mainPurple;
+    text-decoration: underline;
+  }
+  ul {
+    margin: 5px 0 5px 15px;
+  }
+  li {
+    list-style: disc;
+  }
+  table {
+    width: 100%;
+    margin: 10px 0px;
+    border: solid 1px #ccc;
+    border-collapse: collapse;
+    td {
+      padding: 10px;
+      border: solid 1px #ccc;
+    }
+  }
 }
