@@ -478,6 +478,21 @@ $commonRed: #df3c23;
 
 // お客様の声やニュースで使っているリスト
 .box_list {
+  &.show {
+    .box_list_item {
+      @media (min-width: 768px) {
+        width: 100%;
+      }
+      padding: 20px;
+      &:nth-of-type(even) {
+        background-color: $mainPurple-10;
+      }
+      &_img {
+        max-height: 200px;
+        object-fit: cover;
+      }
+    }
+  }
   @media (min-width: 768px) {
     display: flex;
     justify-content: space-between;
@@ -2199,11 +2214,25 @@ $commonRed: #df3c23;
 
 }
 
+.breadcrumbs {
+  margin-bottom: 20px;
+  a {
+    @include text-sm;
+    color: $stringGray;
+    padding-right: 5px;
+    &:not(:last-child)::after {
+      content: ">";
+      margin-left: 5px;
+    }
+  }
+}
 // 記事ページ
 .post {
-  padding-top: 100px;
-  @media (min-width: 768px) {
-    padding-top: 200px;
+  &_wrapper {
+    padding-top: 100px;
+    @media (min-width: 768px) {
+      padding-top: 200px;
+    }
   }
   * {
     line-height: 1.8;
@@ -2212,32 +2241,26 @@ $commonRed: #df3c23;
     @include text-5xl;
     font-weight: 500;
     margin-bottom: 20px;
+    padding: 10px 15px;
+    background-color: $mainPurple-10;
+    border-bottom: solid 3px $mainPurple;
   }
   h2 {
     @include text-2xl;
     position: relative;
-    padding: 5px 10px 5px 20px;
+    padding: 5px 10px;
     margin: 35px 0 15px;
-    background-color: $mainPurple-10;
     font-weight: 500;
-    &:before {
-      content: "";
-      display: inline-block;
-      width: 4px;
-      height: 100%;
-      background: $mainPurple;
-      position: absolute;
-      transform: translateY(-50%);
-      top: 50%;
-      left: 0
-    }
+    border-bottom: thick double $mainPurple;
   }
   h3 {
     @include text-xl;
     font-weight: 500;
     margin: 30px 0 20px;
+    padding: 5px 10px;
     border-bottom: solid 2px $mainPurple;
-    width: fit-content;
+    background-color: $mainPurple-10;
+    border-bottom: solid 3px $mainPurple;
   }
   h4 {
     @include text-lg;

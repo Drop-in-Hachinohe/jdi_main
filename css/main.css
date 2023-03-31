@@ -1735,6 +1735,22 @@
   transform: skewX(-45deg) translateX(-9px);
 }
 
+.box_list.show .box_list_item {
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .box_list.show .box_list_item {
+    width: 100%;
+  }
+}
+.box_list.show .box_list_item:nth-of-type(even) {
+  background-color: rgba(41, 57, 128, 0.1);
+}
+.box_list.show .box_list_item_img {
+  max-height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 @media (min-width: 768px) {
   .box_list {
     display: flex;
@@ -4165,11 +4181,29 @@
   }
 }
 
-.post {
+.breadcrumbs {
+  margin-bottom: 20px;
+}
+.breadcrumbs a {
+  font-size: 0.8125rem; /* 13px */
+  color: #4d4d4d;
+  padding-right: 5px;
+}
+@media (min-width: 640px) {
+  .breadcrumbs a {
+    font-size: 0.875rem; /* 14px */
+  }
+}
+.breadcrumbs a:not(:last-child)::after {
+  content: ">";
+  margin-left: 5px;
+}
+
+.post_wrapper {
   padding-top: 100px;
 }
 @media (min-width: 768px) {
-  .post {
+  .post_wrapper {
     padding-top: 200px;
   }
 }
@@ -4180,6 +4214,9 @@
   font-size: 1.6875rem; /* 27px */
   font-weight: 500;
   margin-bottom: 20px;
+  padding: 10px 15px;
+  background-color: rgba(41, 57, 128, 0.1);
+  border-bottom: solid 3px rgb(41, 57, 128);
 }
 @media (min-width: 640px) {
   .post h1 {
@@ -4189,34 +4226,24 @@
 .post h2 {
   font-size: 1.3125rem; /* 21px */
   position: relative;
-  padding: 5px 10px 5px 20px;
+  padding: 5px 10px;
   margin: 35px 0 15px;
-  background-color: rgba(41, 57, 128, 0.1);
   font-weight: 500;
+  border-bottom: thick double rgb(41, 57, 128);
 }
 @media (min-width: 640px) {
   .post h2 {
     font-size: 1.375rem; /* 22px */
   }
 }
-.post h2:before {
-  content: "";
-  display: inline-block;
-  width: 4px;
-  height: 100%;
-  background: rgb(41, 57, 128);
-  position: absolute;
-  transform: translateY(-50%);
-  top: 50%;
-  left: 0;
-}
 .post h3 {
   font-size: 1.1875rem; /* 19px */
   font-weight: 500;
   margin: 30px 0 20px;
+  padding: 5px 10px;
   border-bottom: solid 2px rgb(41, 57, 128);
-  width: -moz-fit-content;
-  width: fit-content;
+  background-color: rgba(41, 57, 128, 0.1);
+  border-bottom: solid 3px rgb(41, 57, 128);
 }
 @media (min-width: 640px) {
   .post h3 {
